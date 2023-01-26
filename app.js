@@ -41,7 +41,8 @@ class UI {
             <div class="img-container">
                 <img src=${product.image} alt="product" class="product-img">
                 <button class="bag-btn" data-id=${product.id}>
-                    <i class="fas fa-shopping-cart">Add to Bag</i>
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
                 </button>
             </div>
 
@@ -49,17 +50,44 @@ class UI {
             <h4>$${product.price}</h4>
         </article>`
         })
+        productsDOM.innerHTML = result;
+    }
+    getBagButtons(){
+        const buttons = [...document.querySelectorAll(".bag-btn")];
+        buttons.forEach(button => {
+            let id = button.dataset.id;
+            let inCart = cart.find(item => item.id === id);
+            if (inCart){
+                button.innerHTML = "Already In Cart";
+                button.disabled = true;
+            } else{
+                button.addEventListener("click", event => {
+                    event.target.innerHTML = "Already In Cart";
+                    event.target.disabled = true;
+                })
+            }
+        })
     }
 }
 
 // local storage
-class Storage {}
+class Storage {
+    static saveProducts(products){
+        localStorage.setItem("products", JSON.stringify(products));
+    }
+}
 
 document.addEventListener("DOMContentLoaded", ()=> {
     const ui = new UI();
     const products = new Products();
     // get all products
-    products.getProducts().then(products => ui.displayProducts(products));
+    products.getProducts().then(products => {
+        ui.displayProducts(products);
+        Storage.saveProducts(products);
+    }).then(() => {
+        ui.getBagButtons();
+    });
+    
 })
 
 

@@ -1,8 +1,15 @@
 /* @import url("https://fonts.googleapis.com/css?family=Lato:400,700"); */
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400;700&family=Nunito:wght@400;700&family=Sofia+Sans:wght@400;700&display=swap');
+
+/* font-family: 'Bellota Text', cursive;
+font-family: 'Nunito', sans-serif;
+font-family: 'Sofia Sans', sans-serif; */
+
 
 :root {
-  --primaryColor: #f09d51;
+  /* --primaryColor: #f09d51; */
+  --primaryColor: #4C102A;
   --mainWhite: #fff;
   --mainBlack: #222;
   --mainGrey: #ececec;
@@ -55,7 +62,8 @@ body {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: var(--primaryColor);
+    /* background: var(--primaryColor); */
+    background: #f09d51;
     padding: 0 5px;
     border-radius: 30%;
     color: var(--mainWhite);
@@ -76,16 +84,19 @@ body {
 }
 .banner {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
+  background: rgba(216, 228, 250, 0.8);
   display: inline-block;
   padding: 2rem;
 }
 .banner-title {
   font-size: 3.4rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: var(--mainSpacing);
   margin-bottom: 3rem;
   color:#4C102A;
+  font-family: 'Sofia Sans', sans-serif;
+  
 }
 .banner-btn {
   padding: 1rem 3rem;
@@ -94,7 +105,8 @@ body {
   font-size: 1rem;
   background: var(--primaryColor);
   /* color: var(--mainBlack); */
-  color: #4C102A;
+  /* color: #4C102A; */
+  color: #D8E4FA;
   border: 1px solid var(--primaryColor);
   transition: var(--mainTransition);
   cursor: pointer;
@@ -115,7 +127,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 5rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: var(--mainSpacing);
 }
 .products-center {
@@ -135,7 +147,8 @@ body {
   position: absolute;
   top: 70%;
   right: 0;
-  background: var(--primaryColor);
+  /* background: var(--primaryColor); */
+  background:#D8E4FA;
   border: none;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
@@ -147,6 +160,7 @@ body {
 }
 .bag-btn:hover {
   color: var(--mainWhite);
+  background:  var(--primaryColor);
 }
 .fa-shopping-cart {
   margin-right: 0.5rem;
@@ -164,18 +178,25 @@ body {
   opacity: 0.5;
 }
 
+h2{
+  font-family: 'Sofia Sans', sans-serif;
+  color:#4C102A;
+}
+
 .product h3 {
-  text-transform: capitalize;
-  font-size: 1.1rem;
+  /* text-transform: capitalize; */
+  font-size: 1.3rem;
+  font-weight: bolder;
   margin-top: 1rem;
   letter-spacing: var(--mainSpacing);
   text-align: center;
+  color:#4C102A;
 }
 
 .product h4 {
-  margin-top: 0.7rem;
+  margin-top: 0.9rem;
   letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
+  /* color: var(--primaryColor); */
   text-align: center;
 }
 
@@ -224,7 +245,7 @@ body {
   cursor: pointer;
 }
 .cart h2 {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   text-align: center;
   letter-spacing: var(--mainSpacing);
   margin-bottom: 2rem;
@@ -245,7 +266,7 @@ body {
 }
 .cart-item h4 {
   font-size: 0.85rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: var(--mainSpacing);
 }
 .cart-item h5 {
@@ -272,7 +293,7 @@ body {
   text-align: center;
 }
 .cart-footer h3 {
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   margin-bottom: 1rem;
 }
 
