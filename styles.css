@@ -39,8 +39,8 @@ body {
     align-items: center;
     /* background: rgb(231, 226, 221); */
     background: #D8E4FA;
-
     z-index: 1;
+    --bs-navbar-padding-y: 0;
   }
   .navbar-center {
     width: 100%;
@@ -298,3 +298,10 @@ h2{
 }
 
 /* --------------- End of Cart ---------------- */
+
+#contact {
+  background: #D8E4FA;
+  /* background: #bde0fe; */
+  color:#4C102A;
+
+}
